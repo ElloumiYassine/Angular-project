@@ -1,0 +1,26 @@
+<form  (ngSubmit)="onSubmit()" class="row g-3" [formGroup]="actionForm">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Nom d'action</label>
+      <input type="text" class="form-control" formControlName="inputActionName" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Responsable</label>
+      <input type="text" class="form-control" formControlName="inputResponsible" required>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Objectif</label>
+      <input type="text" class="form-control" formControlName="inputObjectif" placeholder="1234 Main St" required>
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Date</label>
+      <input type="date" class="form-control" formControlName="inputDate" required>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Nb de personne</label>
+      <input type="text" class="form-control" formControlName="inputNbPres" required>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [disabled]="!actionForm.valid">Creer</button>
+    </div>
+  </form>
+<app-action-list></app-action-list>

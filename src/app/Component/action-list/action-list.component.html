@@ -1,0 +1,32 @@
+<table class="table " >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nom d'action</th>
+        <th scope="col">Responsable</th>
+        <th scope="col">Objectif</th>
+        <th scope="col">Date</th>
+        <th scope="col">Nb de Personne</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let action of actions" [ngClass]="{'accepted-row': isSelected}">
+        <td>{{ action.id }}</td>
+        <td>{{ action.actionName }}</td>
+        <td>{{ action.responsable }}</td>
+        <td>{{ action.objectif }}</td>
+        <td>{{ action.date }}</td>
+        <td>{{ action.nbPers }}</td>
+        <td><button type="button" class="btn btn-success" (click)="editAction(action)">Modifer</button>
+            <button type="button" class="btn btn-danger" (click)="deleteAction(action.id)">Supprimer</button></td>
+        <td>{{ action.accepted }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <app-edit-action  *ngIf="selectedAction"
+  [action]="selectedAction"
+  (onSaveAction)="onSaveEditedAction($event)"
+  (closeForm)="closeEditForm()"></app-edit-action>
+

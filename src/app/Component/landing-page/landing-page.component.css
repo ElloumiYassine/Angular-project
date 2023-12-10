@@ -1,0 +1,15 @@
+.centre{
+    text-align: center;
+}
+
+.border {
+    border: 1pt;
+    border-radius: 10px;
+}
+
+.text_col{
+    color: aquamarine;
+}
+.sizeImg{
+    width: 750px;
+}

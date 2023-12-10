@@ -1,0 +1,25 @@
+<div class="container ">
+    <h1 class="centre">Bienvenue a notre application</h1>
+    <h2 class="text_col">Ce projet est developpé avec ANGULAR</h2>
+    <div class="row border ">
+        <div class="col-4 ">
+            <p>Dans ce projet nous avons utiliser beacoup de notions :</p>
+        </div>
+        <div class="col-3 ">
+            <ul>
+                <li>Components</li>
+                <li>Services</li>
+                <li>Routing</li>
+                <li>Directives</li>
+                <li>FormGroup</li>
+                <li>Validators</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" >
+        <div  *ngFor="let img of imgs" class="centre">
+            <img src={{img}} alt="" class="sizeImg ">
+            <hr>
+        </div>
+    </div>
+</div>
